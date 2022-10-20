@@ -58,7 +58,7 @@ int main()
 	
 	cout << "Names of students who are defaulters:\n";
 	for(int i = 0; i < n; i++)
-		if(compareDate(returnDate, users[i].day_of_renewal) > 0)
+		if(compareDate(users[i].day_of_renewal, returnDate) > 0)
 			cout << users[i].name << endl;
 	return 0;
 }

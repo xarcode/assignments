@@ -41,9 +41,9 @@ int compareDate(date d1, date d2)
 date addDays(int days, date d)
 {
 	date newDate;
-	newDate.day = d.day + days > 30 ? (d.day + days) % 30 : d.day + days;
-	newDate.month = d.day + days > 30 ? d.month == 12 ? 1 : d.month + 1 : d.month;
-	newDate.year = d.day + days > 30 ? d.month + 1 > 12 ? d.year + 1 : d.year : d.year;
+	newDate.day = d.day + (days % 30);
+	newDate.month = (d.month + (d.day + days) / 30) % 12;
+	newDate.year = d.year + (((d.month - 1) * 30 + d.day + days) / 365);
 	
 	return newDate;
 }
