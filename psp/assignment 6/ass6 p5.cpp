@@ -72,15 +72,15 @@ int main()
 
     cout << endl << "Sorting the student array based on total marks..." << endl;
 
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n - 1; i++)
     {
-        for(int j = i + 1; j < n; j++)
+        for(int j = 0; j < n - i - 1; j++)
         {
-            if(getTotal(students[j - 1].marks) > getTotal(students[j].marks))
+            if(getTotal(students[j].marks) > getTotal(students[j + 1].marks))
             {
-                student t = students[j - 1];
-                students[j - 1] = students[j];
-                students[j] = t;
+                student t = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = t;
             }
         }
     }
