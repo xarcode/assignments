@@ -14,9 +14,22 @@ class RL_Cars
 			hitbox = 30.0;
 		}
 		
+		RL_Cars(string carname, float carhitbox);
+		
 		void show_data();
 		void increase_hitbox(float newHitbox);
+		
+		~RL_Cars()
+		{
+			cout << "Destroying object...\n";
+		}
 };
+
+RL_Cars::RL_Cars(string carname, float carhitbox)
+{
+	name = carname;
+	hitbox = carhitbox;
+}
 
 void RL_Cars::show_data()
 {
@@ -29,11 +42,16 @@ void RL_Cars::increase_hitbox(float newHitbox)
 	hitbox = newHitbox;
 }
 
+void create_car(string carname, float hitbox)
+{
+	cout << "Creating a car inside a function...\n";
+	RL_Cars car(carname, hitbox);
+	cout << "Car created...\n";
+	car.show_data();
+}
+
 int main()
 {
-	RL_Cars car1;
-	car1.show_data();
-	car1.increase_hitbox(40);
-	car1.show_data();
+	create_car("Dominus", 60);
 	return 0;
 }
