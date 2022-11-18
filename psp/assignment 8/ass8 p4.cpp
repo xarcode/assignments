@@ -26,17 +26,19 @@ class matrix
 			}
 		}
 		
-		matrix operator + (matrix m1)
-		{
-			matrix m3;
-			m3.m = m;
-			m3.n = n;
-			for(int i = 0; i < m; i++)
-				for(int j = 0; j < n; j++)
-					m3.a[i][j] = a[i][j] + m1.a[i][j];
-			return m3;
-		}
+		friend matrix operator + (matrix m1, matrix m2);
 };
+
+matrix operator + (matrix m1, matrix m2)
+{
+	matrix m3;
+	m3.m = m1.m;
+	m3.n = m2.n;
+	for(int i = 0; i < m3.m; i++)
+		for(int j = 0; j < m3.n; j++)
+			m3.a[i][j] = m1.a[i][j] + m2.a[i][j];
+	return m3;
+}
 
 int main()
 {
