@@ -12,4 +12,4 @@
 psp/project/*.exe
 
 psp/project/*.o
-psp/project/data
+psp/project/songs.txt
