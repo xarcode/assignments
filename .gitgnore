@@ -9,7 +9,7 @@
 ./psp/assignment7/*.exe
 ./psp/assignment8/*.exe
 ./psp/assignment9/*.exe
-./psp/project/*.exe
+psp/project/*.exe
 
-./psp/project/*.o
-./psp/project/data
+psp/project/*.o
+psp/project/data
