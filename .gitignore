@@ -10,6 +10,6 @@
 ./psp/assignment8/*.exe
 ./psp/assignment9/*.exe
 psp/project/*.exe
-
 psp/project/*.o
-psp/project/songs.txt
+
+psp/project/data/*.txt
