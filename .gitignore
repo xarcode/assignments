@@ -1,15 +1,18 @@
-./.vscode
+.vscode
 
-./psp/assignment1/*.exe
-./psp/assignment2/*.exe
-./psp/assignment3/*.exe
-./psp/assignment4/*.exe
-./psp/assignment5/*.exe
-./psp/assignment6/*.exe
-./psp/assignment7/*.exe
-./psp/assignment8/*.exe
-./psp/assignment9/*.exe
-psp/project/*.exe
-psp/project/*.o
+SEM 1/psp/assignment1/*.e
+SEM 1/psp/assignment2/*.e
+SEM 1/psp/assignment3/*.e
+SEM 1/psp/assignment4/*.e
+SEM 1/psp/assignment5/*.e
+SEM 1/psp/assignment6/*.e
+SEM 1/psp/assignment7/*.e
+SEM 1/psp/assignment8/*.e
+SEM 1/psp/assignment9/*.exe
+SEM 1/psp/project/*.exe
+SEM 1/psp/project/*.o
 
-psp/project/data/*.txt
+SEM 1/psp/project/data/*.txt
+
+SEM 1/PDFs and others
+SEM 2/PDFs and others

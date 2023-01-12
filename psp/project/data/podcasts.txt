@@ -1,6 +1,0 @@
-Joe Rogan,The Joe Rogan Experience,120,Politics,Will Trump Break the wall?,Donald J. Trump
-Mike Kelly,Programming Throwdown,112,Computer Science,How to learn Recursion,Kevin O' Leary
-Tanmay Bhat,Sup3r Pumpd,100,Cryptocurrency,Talking Eth 2.0,Vitalik Buterin
-Stephen West,Philosophize This!,123,Philosophy,Episode 162 - Denial of Death,Stephen West
-Tanmay Bhat,Sup3r Pumpd,121,Cryptocurrency,The FTX Debacle,Parag Agarwal
-Stephen West,Philosophize This!,119,Philosophy,Episode 100 - How to be a Stoic,Stephen West

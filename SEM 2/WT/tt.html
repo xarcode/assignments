@@ -1,0 +1,182 @@
+<!-- AYUSH NANDI -->
+<!-- 22MCF1R13 -->
+
+<!-- Question 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCA TimeTable</title>
+    <style>
+
+        p{
+            font-size: 1.1rem;
+        }
+
+        tr{
+            text-align: center;
+        }
+
+        .table{
+            height: 300px;
+            width: 75vw;
+            margin: 3rem auto;
+        }
+
+        /* .table>td{
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+        } */
+
+        .ps{
+            padding: 0 30px;
+        }
+
+        .top{
+            text-align: center;
+            /* height: 40vh; */
+        }
+
+        .top>table{
+            font-size: 1.1rem;
+        }
+
+        .desc>td{
+            text-align: left;
+            margin: 2px 4px;
+        }
+
+        .center{
+            margin: auto auto;
+        }
+        .desc-table{
+            border-spacing: 20px;
+        }
+        /* .table > tr > td{
+        } */
+
+        body{
+            background-color: #d2e4e7;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        body > table{
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-spacing: 0;
+            background-color: #b6dadd;
+            border-radius: 5px;
+            overflow: hidden;
+            font-size: 1.1rem;
+            /* width: 80%; */
+        }
+        body > table > tbody > tr > td
+        {
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 5px 15px;
+        }
+
+        .table-heading{
+            font-size: 1.25rem;
+            color: blue
+            /* width: 50px; */
+        }
+        
+        .row-head{
+            font-size: 1.25rem;
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>NATIONAL INSTITUTE OF TECHNOLOGY WARANGAL</h1>
+        <p>Department of computer science and engineering</p>
+        <table class="center desc-table">
+            <tr class="desc">
+                <td>I MCA</td>
+                <td>TIME TABLE</td>
+                <td>Rooom #A324</td>
+            </tr>
+            <tr class="desc">
+                <td>II Sem: A.Y. 2022-23</td>
+                <td>w.e.f 09-01-2023</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <table class="table">
+        <tr>
+            <td class="table-heading"></td>
+            <td class="table-heading">8:00-9:00</td>
+            <td class="table-heading">9:00-10:00</td>
+            <td class="table-heading">10:00-11:00</td>
+            <td class="table-heading">11:00-12:00</td>
+            <td class="table-heading">12:00-1:00</td>
+            <td class="table-heading" class="ps"></td>
+            <td class="table-heading">2:00-3:00</td>
+            <td class="table-heading">3:00-4:00</td>
+            <td class="table-heading">4:00-5:00</td>
+        </tr>
+        <tr>
+            <td class="row-head">Mon</td>
+            <td></td>
+            <td>OOP</td>
+            <td>DBS</td>
+            <td>MTP</td>
+            <td>DS</td>
+            <td class="ps"></td>
+            <td colspan="2">DB Lab(CS)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="row-head">Tue</td>
+            <td></td>
+            <td>WT</td>
+            <td>MTP</td>
+            <td>DS</td>
+            <td>DBS</td>
+            <td></td>
+            <td colspan="3">DS Lab(CS)</td>
+        </tr>
+        <tr>
+            <td class="row-head">Wed</td>
+            <td></td>
+            <td>WT</td>
+            <td>MTP</td>
+            <td>DBS</td>
+            <td>DS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="row-head">Thu</td>
+            <td></td>
+            <td></td>
+            <td colspan="3">WT Lab(CS)</td>
+            <td></td>
+            <td>WT</td>
+            <td>OOP</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="row-head">Fri</td>
+            <td></td>
+            <td>OOP</td>
+            <td colspan="3">OOP Lab(CS)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
