@@ -14,7 +14,7 @@ class Sierpinski
 
 	public static void main(String args[])
 	{
-		int n = 32;
-		printSierpinski(n);
+		int n = 4;
+		printSierpinski((int)Math.pow(2, n));
 	}
 }
