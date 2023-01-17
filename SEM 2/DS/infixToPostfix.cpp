@@ -109,6 +109,7 @@ bool isHigherPrecedence(char op1, char op2){
 	return getPrecedence(op2) >= getPrecedence(op1);
 }
 
+// ASSUMPTION: valid infix expression is input
 string InfixToPostfix(string infix){
 	string postfix = "";
 	stack<char> s;
