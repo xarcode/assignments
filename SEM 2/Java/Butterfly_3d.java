@@ -7,7 +7,7 @@ class Butterfly_3d{
 				else System.out.print("  ");
 			for(k = n - 3; k > i - 2; k--)
 				System.out.print("  ");
-			for(k = k; k >= 0; k--)
+			for(; k >= 0; k--)
 				System.out.print("* ");
 			System.out.println();
 		}
@@ -18,7 +18,7 @@ class Butterfly_3d{
 				else System.out.print("  ");
 			for(k = n - 3; k > i - 2; k--)
 				System.out.print("  ");
-			for(k = k; k >= 0; k--)
+			for(; k >= 0; k--)
 				System.out.print("* ");
 			System.out.println();
 		}
