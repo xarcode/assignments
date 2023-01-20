@@ -1,22 +1,18 @@
 .vscode
 
-SEM 1/psp/assignment1/*.e
-SEM 1/psp/assignment2/*.e
-SEM 1/psp/assignment3/*.e
-SEM 1/psp/assignment4/*.e
-SEM 1/psp/assignment5/*.e
-SEM 1/psp/assignment6/*.e
-SEM 1/psp/assignment7/*.e
-SEM 1/psp/assignment8/*.e
-SEM 1/psp/assignment9/*.exe
+# IGNORED FILES FROM SEMESETER 1
+SEM 1/psp/assignment*/*.exe
+
 SEM 1/psp/project/*.exe
 SEM 1/psp/project/*.o
-
 SEM 1/psp/project/data/*.txt
 
 SEM 1/PDFs and others
-SEM 2/PDFs and others
 
-SEM 2/Java/cw.java
 
+# IGNORED FILES FROM SEMESETER 2
+SEM 2/Java/CW
+SEM 2/WT/CW
+SEM 2/DS/CW
 SEM 2/DS/*.exe
+SEM 2/PDFs and others
