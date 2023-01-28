@@ -1,0 +1,40 @@
+body{
+    color: #FAECD6;
+    background-color: #820000;
+    font-family: sans-serif;
+}
+ol{
+    /* margin: 0;
+    padding: 0; */
+    list-style-type: none;
+    counter-reset: counter1;
+}
+
+li:hover{
+    font-style: italic;
+}
+
+ol li:before{
+    color: #F2DEBA;
+    font-size: 20px;
+    font-weight: bold;
+    content: counter(counter1);
+    counter-increment: counter1;
+    margin-right: 20px;
+}
+
+ol ol{
+    list-style-type: none;
+    counter-reset: counter2;
+}
+
+ol ol li:before{
+    content: counter(counter2, upper-alpha);
+    counter-increment: counter2;
+
+}
+
+ol ol ol li:before{
+    content: counter(counter2, lower-roman);
+    counter-increment: counter2;
+}
