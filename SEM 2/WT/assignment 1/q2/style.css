@@ -1,0 +1,40 @@
+body {
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ml {
+    margin-left: 100px;
+}
+
+fieldset{
+    background-color: #ceceed;
+}
+
+legend {
+    font-weight: bold;
+    color: #00597a;
+}
+
+.center{
+    width: max-content;
+    margin: auto;
+}
+
+input[type="button"]{
+    margin: 0 20px;
+    margin-top: 10px;
+    background-color: #00597a;
+    color: white;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+input[type="button"]:hover{
+    background-color: #004964;
+    transition: .3s;
+}
