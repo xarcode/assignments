@@ -5,6 +5,10 @@
     /*URL to font*/
 }
 
+*::selection{
+    background-color: black;
+}
+
 body {
     font-family: 'Lack';
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
