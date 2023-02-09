@@ -2,12 +2,11 @@
 using namespace std;
 
 template <typename T>
-void merge(T array[], int const left, int const mid,
-		int const right)
+void merge(T array[], int const left, int const mid, int const right)
 {
 	int n1 = mid - left + 1;
 	int n2 = right - mid;
-
+ 
 	T *L = new T[n1],
 		*R = new T[n2];
 

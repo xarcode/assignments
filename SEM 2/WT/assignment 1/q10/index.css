@@ -1,0 +1,30 @@
+.jumbotron{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    /* height: 100vh; */
+    /* display: flex; */
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbo-img{
+    height: 300px;
+    aspect-ratio: auto;
+}
+
+body{
+    display: flex;  
+    flex-direction: column;
+}
+
+.big-text{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+}
+
+.small-text{
+    color: rgb(204, 204, 204);
+    font-weight: 400;
+}
