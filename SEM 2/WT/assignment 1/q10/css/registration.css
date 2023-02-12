@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.registration-form {
+    /* font-family: ; */
+    /* width: 90%; */
+    background-color: whitesmoke;
+    padding: 20px 40px;
+    margin-top: calc(75px);
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 14px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 14px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 14px -3px rgba(0, 0, 0, 0.75);
+}
+
+table {
+    border-spacing: 10px 15px;
+    font-size: large;
+}
+
+.ml {
+    margin-left: 100px;
+}
+
+fieldset {
+    background-color: #ceceed;
+}
+
+legend {
+    font-weight: bold;
+    color: #00597a;
+}
+
+.center {
+    width: max-content;
+    margin: auto;
+}
+
+input {
+    font-size: large;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+}
+
+input[type="button"] {
+    margin: 0 20px;
+    margin-top: 10px;
+    background-color: #00597a;
+    color: white;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+input[type="button"]:hover {
+    background-color: #004964;
+    transition: .3s;
+}
