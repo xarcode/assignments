@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .page-content{
+            border-radius: 10px;
+            width: 50%;
+            background-color: blanchedalmond;
+            margin: auto;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid ;
+            box-shadow: 8px 8px 0 0 rgb(153, 153, 140)
+        }
+
+        .login{
+            font-size: 30px;
+            display: grid;
+            /* display: none; */
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+        }
+
+        .result{
+            display: none;
+            font-size: 30px;
+        }
+
+        input[type='text'], input[type='password']{
+            padding: 10px;
+        }
+
+        input[type='submit']{
+            margin-top: 20px;
+            padding: 10px;
+            background: none;
+            border: 1px solid rgb(168, 137, 137);
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="page-content">
+        
+            <form action="#" class="login" onsubmit="login(); return false;">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <input type="submit" value="Login">
+            </form>
+        <div class="result"></div>
+    </div>
+    <div class="result"></div>
+</body>
+</html>
