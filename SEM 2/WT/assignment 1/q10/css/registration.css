@@ -49,6 +49,14 @@ input {
     width: 100%;
 }
 
+textarea{
+    resize: none;
+    width: 500px;
+    height: 40px;
+    font-size: large;
+    padding: 10px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -57,7 +65,7 @@ input[type="date"] {
     padding: 10px;
 }
 
-input[type="button"] {
+input[type="button"], input[type="reset"]  {
     margin: 0 20px;
     margin-top: 10px;
     background-color: #00597a;

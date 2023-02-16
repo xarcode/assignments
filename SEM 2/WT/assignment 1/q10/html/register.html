@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../css/navbar-style.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/registration.css">
+    <script src="../../q11/registration.js"></script>
     <title>NITW EBS</title>
 </head>
 
@@ -63,7 +64,7 @@
             <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </div>
-    <form action="#" class="registration-form">
+    <form action="./register.html" class="registration-form">
         <h1>Please Enter your details</h1>
         <table>
             <tr>
@@ -71,51 +72,71 @@
                     <label for="name">Name*:</label>
                 </td>
                 <td>
-                    <input type="text" name="name" id="" required>
+                    <input type="text" name="name" id="name" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="email">Email*:</label>
                 </td>
-                <td><input type="email" name="email" id="" required></td>
+                <td><input type="email" name="email" id="email" required></td>
             </tr>
             <tr>
                 <td>
                     <label for="phone">Phone No*:</label>
                 </td>
-                <td><input type="number" name="phone" id="" required></td>
+                <td><input type="number" name="phone" id="phone" required></td>
             </tr>
             <tr>
                 <td>
                     <label for="uid">User ID*:</label>
                 </td>
-                <td><input type="text" name="uid" id="" required></td>
+                <td><input type="text" name="uid" id="username" required></td>
             </tr>
             <tr>
                 <td>
                     <label for="pass">Password*:</label>
                 </td>
-                <td><input type="password" name="pass" id="" required></td>
+                <td><input type="password" name="pass" id="password" required></td>
             </tr>
             <tr>
                 <td>
-                    <label for="rpass">Re-enter Password*:</label>
+                    <p>Gender:</p>
                 </td>
-                <td><input type="password" name="rpass" id="" required></td>
+                <td>
+                    <span style="display: grid; grid-template-columns: 1fr 2fr; margin: 10px 0;">
+                        <input type="radio" id="male" name="fav_language" value="Male" checked="checked">
+                        <label for="html">Male</label>
+                    </span>
+                    <span style="display: grid; grid-template-columns: 1fr 2fr; margin: 10px 0;">
+                        <input type="radio" id="female" name="fav_language" value="Female">
+                        <label for="css">Female</label>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td><label for="dob">Date of Birth*:</label></td>
-                <td><input type="date" name="dob" id="" required></td>
+                <td><input type="date" name="dob" id="dob" required></td>
             </tr>
             <tr>
-                <td><label for="address1">Address 1*:</label></td>
+                <td><label for="dob">Languages Known*:</label></td>
+                <td style="display: grid; grid-template-columns: 1fr 2fr; grid-gap: 10px;">
+                    <input type="checkbox" id="english" name="english" value="english">
+                    <label for="english">English</label>
+                    <input type="checkbox" id="telegu" name="telegu" value="telegu">
+                    <label for="telegu">Telegu</label>
+                    <input type="checkbox" id="hindi" name="hindi" value="hindi">
+                    <label for="hindi">Hindi</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="address1">Address*:</label></td>
                 <td><textarea name="address1" id="" cols="30" rows="10" required></textarea></td>
             </tr>
         </table>
         <div class="center">
-            <input type="button" value="Register">
-            <input type="button" value="Reset">
+            <input type="button" value="Register" onclick="validate()">
+            <input type="reset" value="Reset">
         </div>
     </form>
 </body>

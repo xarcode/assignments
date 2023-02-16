@@ -22,9 +22,9 @@ body{
     margin-top: calc(50px + 75px);
 }
 
-.dropdown ul li{
-    color: #fbeaeb;
-}
+    .dropdown ul li{
+        color: #fbeaeb;
+    }
 .catalouge{
     width: 1200px;
     margin: auto;
