@@ -1,0 +1,183 @@
+.jumbotron{
+    width: 92%;
+    margin: auto;
+    text-align: center;
+    /* height: 100vh; */
+    /* display: flex; */
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbo-img{
+    margin-left: 100px;
+    height: 330px;
+    aspect-ratio: auto;
+}
+
+body{
+    display: flex;  
+    flex-direction: column;
+}
+
+.jumbo-text{
+    box-sizing: border-box;
+    /* padding-left: 400px; */
+    margin-right: 250px;
+    flex-basis: 700px;
+}
+
+.big-text{
+    font-size: 3.5rem;
+    color: #fbeaeb;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* 
+.changing-text {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 75px;
+    width: 246px;
+}
+
+.changing-text-content{
+    position: absolute;
+    display: flex;
+    list-style-type: none;
+    animation: animate infinite linear 5s;
+}
+
+.changing-text-content li{
+    width: 246px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@keyframes animate {
+    0%{
+        left: 0;
+    }
+
+    100%{
+        left: -738px;
+    }
+} */
+.changing-text {
+    display: inline-block;
+    overflow-y: hidden;
+    position: relative;
+    height: 55px;
+    width: 300px;
+}
+
+.changing-text-content{
+    z-index: 2;
+    position: absolute;
+    animation: animate infinite ease-in-out 5.5s;
+    /* animation-delay: 1s; */
+}
+
+/* .changing-text-content li{
+    font-family: 'Lobster', cursive;
+} */
+
+@keyframes animate {
+    /* 0%{
+        top: 0;
+    }
+
+    14.28%{
+        top: 0;
+    }
+
+    28.56%{
+        top: -69px;
+    }
+    
+    42.84%{
+        top: -69px;
+    }
+
+    57.12%{
+        top: -136px;
+    }
+    
+    71.4%{
+        top: -136px;
+    }
+
+    85.63%{
+        top: -204px
+    }
+
+    100%{
+        top: -204px;
+    } */
+    0%{
+        top: 0;
+    }
+
+    16.66%{
+        top: 0;
+    }
+
+    33.33%{
+        top: -69px;
+    }
+    
+    49.99%{
+        top: -69px;
+    }
+
+    66.65%{
+        top: -136px;
+    }
+    
+    83.31%{
+        top: -136px;
+    }
+
+    100%{
+        top: -204px
+    }
+
+    /* 100%{
+        top: -204px;
+    } */
+}
+
+.small-text{
+    color: #d1bcbd;
+    font-weight: 400;
+    text-align: left;
+    font-size: large;
+}
+.small-text p{
+    margin: 10px 0;
+}
+
+.button{
+    margin-top: 20px;
+    background: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: #fbeaeb;
+    color: #fbeaeb;
+    border-style: solid;
+    transition: .2s;
+}
+.wavy{
+    /* text-decoration: underline wavy #deac09; */
+    color: #deac09;
+    /* font-size: large; */
+}
+.button:hover{
+    background-color: #fbeaeb;
+    color: #2f3c7e;
+    border: inherit solid #2f3c7e;
+}

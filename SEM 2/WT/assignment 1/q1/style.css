@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color: antiquewhite;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: rgb(71, 42, 5);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 16px;
+}
+
+th,
+td {
+    background-color: rgb(255, 235, 208);
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+}

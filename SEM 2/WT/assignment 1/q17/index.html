@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    PLEASE INTERACT WITH THE WEBSITE FIRST IN ORDER TO FIRE THE BEFOREUNLOAD EVENT
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            background-color: beige;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click on me before exiting the webpage</h1>
+    <script defer>
+        window.onload = alert('Welcome');
+
+        document.body.addEventListener('click', () => {
+            let h1 = document.getElementsByTagName('h1')[0];
+            h1.innerHTML = 'You can exit this page :)'
+        })
+
+        window.addEventListener("beforeunload", function (event) {
+            event.preventDefault();
+            event.returnValue = "Bye Bye"; // you cannot show personalized messages to the user
+        });
+
+    </script>
+</body>
+
+</html>
