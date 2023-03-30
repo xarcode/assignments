@@ -74,13 +74,13 @@ int successor(int v){
 void inorder(node* curNode){
 	if(curNode!=NULL){
 		inorder(curNode->left);
-		cout<<","<<curNode->data<<",";
+		cout<<curNode->data<<" ";
 		inorder(curNode->right);
 	}
 }
 void preorder(node* curNode){
 	if(curNode!=NULL){
-		cout<<","<<curNode->data<<",";
+		cout<<curNode->data<<" ";
 		preorder(curNode->left);
 		preorder(curNode->right);
 	}
@@ -89,7 +89,7 @@ void postOrder(node* curNode){
 	if(curNode!=NULL){
 		postOrder(curNode->left);
 		postOrder(curNode->right);
-		cout<<","<<curNode->data<<",";
+		cout<<curNode->data<<" ";
 	}
 }
 
@@ -151,12 +151,15 @@ cout<<"1.insert\n 2.search\n 3.delete\n 4.Know the inorder\n 5.Know the preorder
 			root=deleteNode(root,d);
 			cout<<endl<<"inorder traversal after deletion: "<<endl;inorder(root);break;
     	case 4:	inorder(root);
+    	cout << endl;
 		break;
     	
     	case 5:preorder(root);
+    	cout << endl;
 		break;
     	
     	case 6:postOrder(root);
+    	cout << endl;
 		break;
     	
     	case 7:cout<<maxVal(root)<<endl;
