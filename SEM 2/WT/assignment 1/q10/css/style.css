@@ -1,7 +1,0 @@
-body {
-    min-height: 100vh;
-    background: #2f3c7e;
-    background: linear-gradient(65deg, #2f3c7e 50%, #fbeaeb 50%);
-    /* background: rgb(47, 60, 126);
-    background: linear-gradient(65deg, rgba(47, 60, 126, 1) 49%, rgba(47, 60, 126, 1) 50%, rgba(222, 172, 9, 1) 50%, rgba(47, 60, 126, 1) 50%, rgba(251, 234, 235, 1) 50%, rgba(222, 172, 9, 1) 50%, rgba(222, 172, 9, 1) 51%, rgba(251, 234, 235, 1) 51%); */
-} 
