@@ -1,6 +1,6 @@
 const uname = 'xarcode'
 const pass = '12345'
-
+// function login(){}
 let login = () => {
     let username = document.querySelector('#username').value;
     let password = document.querySelector('#password').value;

@@ -141,6 +141,7 @@ table {
 
 td,
 th {
+    /* white-space: nowrap; */
     border: 1px solid #dbdbdb;
     padding: 3px;
     /* border: 1px solid #E88741; */
