@@ -11,6 +11,9 @@ public:
     int height;
 };
 
+Node *root = NULL;
+
+
 int height(Node *N)
 {
     if (N == NULL)
@@ -76,6 +79,31 @@ int getBalance(Node *N)
     return height(N->left) - height(N->right);
 }
 
+// Search
+Node *search(Node *curNode, int sv)
+{
+	if (curNode == NULL)
+		return NULL;
+	if (curNode->key == sv)
+	{
+		return curNode;
+	}
+	else if (curNode->key < sv)
+		return search(curNode->right, sv);
+	else
+		return search(curNode->left, sv);
+}
+
+bool search(int sv)
+{
+	Node *serNode = search(root, sv);
+	if (serNode == NULL)
+		return false;
+	if (serNode->key == sv)
+		return true;
+	return false;
+}
+
 Node *insert(Node *node, int key)
 {
     if (node == NULL)
@@ -118,6 +146,13 @@ Node *insert(Node *node, int key)
     return node;
 }
 
+bool insert(int v)
+{
+	root = insert(root, v);
+	// cout<<"se";
+	return search(v);
+}
+
 Node * minValueNode(Node* node)
 {
     Node* current = node;
@@ -153,7 +188,8 @@ Node *deleteNode(Node *root, int key)
             }
             else
                 *root = *temp;
-            free(temp);
+//            free(temp);
+			delete temp;
         }
         else
         {
@@ -205,38 +241,164 @@ Node *deleteNode(Node *root, int key)
     return root;
 }
 
-void inOrder(Node *root)
+// MAX and MIN
+
+int maxVal(Node *curNode)
 {
-    if (root != NULL)
-    {
-        inOrder(root->left);
-        cout << root->key << " ";
-        inOrder(root->right);
-    }
+	if (curNode == NULL)
+		return -1;
+	if (curNode->right == NULL)
+		return curNode->key;
+	return maxVal(curNode->right);
+}
+
+int minVal(Node *curNode)
+{
+	if (curNode == NULL)
+		return -1;
+	if (curNode->left == NULL)
+		return curNode->key;
+	return minVal(curNode->left);
+}
+
+// Traversals
+// inorder
+
+void inorder(Node *curNode)
+{
+	if (curNode != NULL)
+	{
+		inorder(curNode->left);
+		cout << curNode->key << " ";
+		inorder(curNode->right);
+	}
+}
+void preorder(Node *curNode)
+{
+	if (curNode != NULL)
+	{
+		cout << curNode->key << " ";
+		preorder(curNode->left);
+		preorder(curNode->right);
+	}
+}
+void postOrder(Node *curNode)
+{
+	if (curNode != NULL)
+	{
+		postOrder(curNode->left);
+		postOrder(curNode->right);
+		cout << curNode->key << " ";
+	}
+}
+
+// Predecessor and Sucessor
+
+int predecessor(int v)
+{
+	Node *serNode = search(root, v);
+	if(serNode)
+		return maxVal(serNode->left);
+	return -1;
+}
+int successor(int v)
+{
+	Node *serNode = search(root, v);
+	if(serNode)
+		return minVal(serNode->right);
+	return -1;
+}
+
+
+
+void menu()
+{
+	cout << "+---------------------------------------------------+\n";
+	cout << "|                  BST OPERATIONS                   |" << endl;
+	cout << "+---------------------------------------------------+\n";
+	cout << "|  1. Insert into AVL Tree                          |" << endl;
+	cout << "|  2. Search the AVL Tree                           |" << endl;
+	cout << "|  3. Delete from AVL Tree                          |" << endl;
+	cout << "+---------------------------------------------------+\n";
+	cout << "|  4. Print inorder                                 |" << endl;
+	cout << "|  5. Print preorder                                |" << endl;
+	cout << "|  6. Print postorder                               |" << endl;
+	cout << "+---------------------------------------------------+\n";
+	cout << "|  7. Print the max value of tree                   |" << endl;
+	cout << "|  8. Print the min value of tree                   |" << endl;
+	cout << "|  9. Print the successor of a node                 |" << endl;
+	cout << "+---------------------------------------------------+\n";
+	cout << "|  10. Print the predecessor of a node              |" << endl;
+	cout << "|  11. Exit                                         |" << endl;
+	cout << "+---------------------------------------------------+\n";
 }
 
 int main()
 {
-    Node *root = NULL;
-    root = insert(root, 10);
-    root = insert(root, 20);
-    root = insert(root, 30);
-    root = insert(root, 40);
-    root = insert(root, 50);
-    root = insert(root, 25);
+	int op;
+	int d;
+	while (op < 11)
+	{
+		menu();
+		cout << endl
+			 << "Enter your choice: ";
+		cin >> op;
+		switch (op)
+		{
+		case 1:
+			cout << "Enter a integer 1:" << endl;
+			cin >> d;
+			cout << (insert(d) ? "inserted" : "cant insert") << "\n";
+			break;
+		case 2:
+			cout << "Enter the key you want to search : " << endl;
+			cin >> d;
+			cout << (search(d) ? "found" : "not  found") << "\n";
+			break;
+		case 3:
+			cout << "inorder traversal before deletion :" << endl;
+			inorder(root);
+			cout << "\nEnter the key you want to delete : ";
+			cin >> d;
+			root = deleteNode(root, d);
+			cout << endl
+				 << "inorder traversal after deletion: " << endl;
+			inorder(root);
+			cout << endl;
+			break;
+		case 4:
+			inorder(root);
+			cout << endl;
+			break;
 
-    /* The constructed AVL Tree would be
-                30
-            / \
-            20 40
-            / \ \
-        10 25 50
-    */
-    cout << "Preorder traversal of the "
-            "constructed AVL tree is \n";
-    inOrder(root);
-    deleteNode(root, 25);
-    inOrder(root);
+		case 5:
+			preorder(root);
+			cout << endl;
+			break;
 
-    return 0;
+		case 6:
+			postOrder(root);
+			cout << endl;
+			break;
+
+		case 7:
+			cout << maxVal(root) << endl;
+			break;
+
+		case 8:
+			cout << minVal(root) << endl;
+			break;
+		case 9:
+			cout << "Enter an element to find the successor for: ";
+			cin >> d;
+			cout << successor(d) << endl;
+			break;
+		case 10:
+			cout << "Enter an element to find the predecessor for: ";
+			cin >> d;
+			cout << predecessor(d) << endl;
+			break;
+		}
+	}
+	return 0;
 }

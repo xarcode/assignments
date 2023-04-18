@@ -207,12 +207,13 @@ int main()
 		case 3:
 			cout << "inorder traversal before deletion :" << endl;
 			inorder(root);
-			cout << "Enter the key you want to delete : ";
+			cout << "\nEnter the key you want to delete : ";
 			cin >> d;
 			root = deleteNode(root, d);
 			cout << endl
 				 << "inorder traversal after deletion: " << endl;
 			inorder(root);
+			cout << endl;
 			break;
 		case 4:
 			inorder(root);
