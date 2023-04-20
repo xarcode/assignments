@@ -1,0 +1,18 @@
+<web-app>
+    <servlet>
+        <servlet-name>CookieAdder</servlet-name>
+        <servlet-class>MakeCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieAdder</servlet-name>
+        <url-pattern>/addcookie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CookieViewer</servlet-name>
+        <servlet-class>ViewCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieViewer</servlet-name>
+        <url-pattern>/viewcookie</url-pattern>
+    </servlet-mapping>
+</web-app>
